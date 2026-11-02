@@ -11,7 +11,7 @@ import BookingBar from './BookingBar'
  * - Tagline in italic serif
  * - Floating white booking bar overlapping the bottom edge
  *
- * IMAGE: /public/images/Photo-Gallerie-1-1200.jpg
+ * IMAGE: /public/images/hero/hero-building.jpg
  * Replace this file (same name) with your own high-resolution photo
  * (recommended: 2400x1600px, dusk/twilight lighting for best contrast).
  */
@@ -32,6 +32,7 @@ export default function Hero() {
           `loading="eager"` interdit tout report. Un `<link rel="preload">` dans
           index.html la lance avant même que React ne démarre.
         */}
+        
         <img
           src="/images/Photo-Gallerie-1-1200.jpg"
           alt="Marina Beach Toamasina — façade de l'hôtel au crépuscule"
@@ -42,6 +43,7 @@ export default function Hero() {
           decoding="async"
           className="w-full h-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/50" />
       </div>
 

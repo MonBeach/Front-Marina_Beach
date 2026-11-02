@@ -3,7 +3,7 @@ import { GripVertical, ImagePlus, Trash2, Upload } from 'lucide-react'
 import { resolveImageUrl, uploadImages } from '@/utils/api'
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/avif,image/gif'
-const MAX_MB = 5
+const MAX_MB = 20
 
 /** Nom lisible d'un fichier, à partir de son chemin. */
 const basename = (src: string) => src.split('/').pop() || src

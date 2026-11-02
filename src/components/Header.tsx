@@ -19,8 +19,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const isHome = location.pathname === '/'
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
@@ -32,8 +30,8 @@ export default function Header() {
     setMobileOpen(false)
   }, [location.pathname])
 
-  // Transparent overlay only on homepage hero, before scrolling
-  const transparent = isHome && !scrolled && !mobileOpen
+  // Overlay the page hero until the visitor starts scrolling.
+  const transparent = !scrolled && !mobileOpen
   const textColor = transparent ? 'text-white' : 'text-charcoal'
   // Couleur de survol plus visible : turquoise clair sur fond transparent, turquoise foncé sur fond blanc
   const hoverColor = transparent ? 'hover:text-gold-300' : 'hover:text-gold-600'

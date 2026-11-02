@@ -4,6 +4,8 @@ interface PageHeroProps {
   image: string
   title: string
   subtitle?: string
+  preserveAspectRatio?: boolean
+  expanded?: boolean
 }
 
 /**
@@ -12,10 +14,14 @@ interface PageHeroProps {
  * Smaller banner hero used on secondary pages (Rooms, Restaurant, Spa...).
  * Keeps the same turquoise/white aesthetic as the homepage hero.
  */
-export default function PageHero({ image, title, subtitle }: PageHeroProps) {
+export default function PageHero({ image, title, subtitle, preserveAspectRatio = false, expanded = false }: PageHeroProps) {
   return (
-    <section className="relative h-[55vh] min-h-[380px] w-full overflow-hidden mt-0">
-      <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+    <section className={`relative w-full overflow-hidden mt-0 ${expanded ? 'aspect-video' : 'h-[55vh] min-h-[380px]'} ${preserveAspectRatio ? 'bg-black' : ''}`}>
+      <img
+        src={image}
+        alt={title}
+        className={`absolute inset-0 w-full h-full ${preserveAspectRatio ? 'object-contain' : 'object-cover'}`}
+      />
       <div className="absolute inset-0 bg-black/45" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
