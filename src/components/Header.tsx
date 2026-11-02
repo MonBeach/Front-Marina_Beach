@@ -10,7 +10,7 @@ const navItems = [
   { to: '/restaurant', key: 'restaurant' },
   { to: '/piscine-bien-etre', key: 'spa' },
   { to: '/reunions-evenements', key: 'events' },
-  { to: '/decouvrir-antsirabe', key: 'discover' },
+  { to: '/decouvrir-toamasina', key: 'discover' },
 ]
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
   // Transparent overlay only on homepage hero, before scrolling
   const transparent = isHome && !scrolled && !mobileOpen
   const textColor = transparent ? 'text-white' : 'text-charcoal'
-  // Couleur de survol plus visible : doré clair sur fond transparent, doré foncé sur fond blanc
+  // Couleur de survol plus visible : turquoise clair sur fond transparent, turquoise foncé sur fond blanc
   const hoverColor = transparent ? 'hover:text-gold-300' : 'hover:text-gold-600'
 
   return (
@@ -50,7 +50,7 @@ export default function Header() {
         <Link to="/" className="flex items-center shrink-0">
           <img
             src={transparent ? '/images/logo.png' : '/images/logo-dark.png'}
-            alt="Royal Palace Antsirabe"
+            alt="Marina Beach Toamasina"
             className="h-14 md:h-20 w-auto object-contain transition-opacity duration-300"
           />
         </Link>

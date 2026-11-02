@@ -99,7 +99,7 @@ export default function Events() {
     try {
       const result = await api.sendEventInquiry(form)
       if (result.error) {
-        console.error('[Royal Palace] Event inquiry failed:', result.error)
+        console.error('[Marina Beach] Event inquiry failed:', result.error)
         setSubmitError(
           typeof result.error === 'string' && result.error !== 'Network error'
             ? `L'envoi a échoué : ${result.error}`
@@ -110,7 +110,7 @@ export default function Events() {
         setStatus('success')
       }
     } catch (err) {
-      console.error('[Royal Palace] Event inquiry exception:', err)
+      console.error('[Marina Beach] Event inquiry exception:', err)
       setSubmitError('Impossible de contacter le serveur. Veuillez réessayer plus tard.')
       setStatus('idle')
     }

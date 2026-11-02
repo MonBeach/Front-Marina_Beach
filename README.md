@@ -1,6 +1,6 @@
-# Royal Palace Antsirabe — Site Web Officiel
+# Marina Beach Toamasina — Site Web Officiel
 
-Site web de luxe complet pour l'hôtel **Royal Palace Antsirabe** (Madagascar), construit avec React + TypeScript + Vite + Tailwind CSS. Design inspiré de peninsula.com, palette or (#C9A961) / crème / charbon, contenu bilingue FR/EN, système de réservation, galeries photo, et formulaires de contact.
+Site web de luxe complet pour l'hôtel **Marina Beach Toamasina** (Madagascar), construit avec React + TypeScript + Vite + Tailwind CSS. Design inspiré de peninsula.com, palette bleu marine (#143369) / turquoise (#26A4B2) / blanc froid, contenu bilingue FR/EN, système de réservation, galeries photo, et formulaires de contact.
 
 > ℹ️ Note honnête : l'hôtel réel est classé **3 étoiles**. Ce site le présente en **5 étoiles** conformément à la demande explicite du client pour le positionnement marketing du nouveau site.
 
@@ -16,7 +16,7 @@ Site web de luxe complet pour l'hôtel **Royal Palace Antsirabe** (Madagascar), 
 | **Animations** | Framer Motion (reveal au scroll, hover) |
 | **Icônes** | lucide-react |
 | **Dates** | date-fns |
-| **Pages** | 7 (Accueil, Chambres & Suites, Restaurant, Piscine & Bien-être, Réunions & Événements, Découvrir Antsirabe, Contact) |
+| **Pages** | 7 (Accueil, Chambres & Suites, Restaurant, Piscine & Bien-être, Réunions & Événements, Découvrir Toamasina, Contact) |
 | **Backend** | Aucun — site 100% statique (formulaires en `console.log`, prêt à connecter à une API) |
 | **Déploiement cible** | N'importe quel hébergeur de sites statiques (Cloudflare Pages, Netlify, Vercel, etc.) |
 
@@ -31,7 +31,7 @@ Site web de luxe complet pour l'hôtel **Royal Palace Antsirabe** (Madagascar), 
 
 ```bash
 # 1. Décompresser l'archive puis se placer dans le dossier
-cd royal-palace-antsirabe
+cd marina-beach-toamasina
 
 # 2. Installer les dépendances
 npm install
@@ -64,7 +64,7 @@ npm run preview
 ## 3. Structure du projet
 
 ```
-royal-palace-antsirabe/
+marina-beach-toamasina/
 ├── index.html                  # Point d'entrée HTML (balises SEO, fonts Google)
 ├── public/
 │   ├── favicon.svg
@@ -102,7 +102,7 @@ royal-palace-antsirabe/
 │   │   ├── Restaurant.tsx        → /restaurant
 │   │   ├── Spa.tsx               → /piscine-bien-etre
 │   │   ├── Events.tsx            → /reunions-evenements
-│   │   ├── Discover.tsx          → /decouvrir-antsirabe
+│   │   ├── Discover.tsx          → /decouvrir-toamasina
 │   │   └── Contact.tsx           → /contact
 │   │
 │   ├── data/                    # ⭐ Contenu structuré (chambres, menu, tarifs...)
@@ -150,7 +150,7 @@ royal-palace-antsirabe/
 | `public/images/pool/` | Piscine | `pool-1.jpg` à `pool-3.jpg` | 1600×1067px |
 | `public/images/spa/` | Spa & Bien-être | `spa-1.jpg` à `spa-3.jpg` | 1600×1067px |
 | `public/images/events/` | Réunions & Événements | `events-1.jpg` à `events-3.jpg` | 1600×1067px |
-| `public/images/discover/` | Découvrir Antsirabe | `antsirabe-1.jpg` à `antsirabe-3.jpg`, `garden-1.jpg` | 1600×1067px |
+| `public/images/discover/` | Découvrir Toamasina | `toamasina-1.jpg` à `toamasina-3.jpg`, `garden-1.jpg` | 1600×1067px |
 | `public/images/gallery/` | Galerie générale (lobby...) | `lobby-1.jpg` | 1600×1067px |
 
 ### Pour ajouter/changer une image avec un **nouveau nom de fichier** :
@@ -177,9 +177,9 @@ Chaque fichier est un objet JavaScript organisé par **namespace** (une section 
 ```typescript
 export default {
   hero: {
-    title: 'ROYAL PALACE',
-    subtitle: 'ANTSIRABE',
-    tagline: 'Une adresse de charme au cœur d\'Antsirabe',
+    title: 'MARINA BEACH',
+    subtitle: 'TOAMASINA',
+    tagline: 'Une adresse de charme au cœur d\'Toamasina',
   },
   nav: {
     rooms: 'Chambres & Suites',
@@ -230,9 +230,9 @@ Tout est centralisé dans **`tailwind.config.js`** :
 theme: {
   extend: {
     colors: {
-      gold: { 500: '#C9A961', ... },   // couleur signature (or)
-      cream: '#F5F5F0',                 // fond clair
-      charcoal: '#2C2C2C',              // texte foncé
+      gold: { 500: '#26A4B2', ... },   // alias historique, accent turquoise du logo
+      cream: '#F5F8FA',                 // fond clair
+      charcoal: '#143369',              // bleu marine du logo
     },
     fontFamily: {
       serif: ['Playfair Display', 'serif'],  // titres
@@ -250,7 +250,7 @@ Changez les valeurs hexadécimales pour adapter la palette. Les polices sont cha
 
 ### Sélecteur de langue FR/EN
 - Composant `LanguageSelector.tsx`, géré par `useLanguage.ts`.
-- La langue choisie est sauvegardée dans `localStorage` (clé `royalpalace_lang`) et restaurée à la prochaine visite.
+- La langue choisie est sauvegardée dans `localStorage` (clé `marinabeach_lang`) et restaurée à la prochaine visite.
 
 ### Barre de réservation (`BookingBar.tsx`)
 - Champs date d'arrivée/départ (`<input type="date">` natif, validé par `dateHelpers.ts` pour empêcher une date de départ avant l'arrivée).
@@ -296,7 +296,7 @@ Le site est **100% statique** (aucun serveur requis) — le dossier `dist/` gén
 ### Option A — Cloudflare Pages (recommandé)
 ```bash
 npm run build
-npx wrangler pages deploy dist --project-name royal-palace-antsirabe
+npx wrangler pages deploy dist --project-name marina-beach-toamasina
 ```
 (nécessite un compte Cloudflare et `wrangler` configuré — voir [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages/))
 
@@ -331,7 +331,7 @@ Uploadez simplement le contenu du dossier `dist/` généré par `npm run build` 
 
 ## 12. Contenu & sources
 
-Le contenu (histoire, restaurant, coordonnées) a été extrait du site officiel [hotel-royal-palace.com](https://hotel-royal-palace.com/) et complété par les informations publiques des fiches Google (adresse, horaires, hôtels sœurs La Colongette / Marina Beach / Vezo Beach). Tous les textes sont fournis en français (langue principale) avec traduction anglaise complète.
+Le contenu (histoire, restaurant, coordonnées) a été extrait du site officiel [hotel-marina-beach.com](https://hotel-marina-beach.com/) et complété par les informations publiques des fiches Google (adresse, horaires, hôtels sœurs La Colongette / Marina Beach / Vezo Beach). Tous les textes sont fournis en français (langue principale) avec traduction anglaise complète.
 
 ---
 

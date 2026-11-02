@@ -1,5 +1,5 @@
 // ============================================================
-// Global TypeScript type definitions for Royal Palace Antsirabe
+// Global TypeScript type definitions for Marina Beach Toamasina
 // ============================================================
 
 export interface Room {

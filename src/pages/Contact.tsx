@@ -61,8 +61,8 @@ export default function Contact() {
               <Mail size={18} className="text-gold-500 mt-0.5 shrink-0" />
               <div>
                 <div className="font-medium text-charcoal">{t('contact.emailInfoLabel')}</div>
-                <a href="mailto:royalpalace.resa@moov.mg" className="text-gray-600 hover:text-gold-600 block">
-                  royalpalace.resa@moov.mg
+                <a href="mailto:marinabeach.resa@moov.mg" className="text-gray-600 hover:text-gold-600 block">
+                  marinabeach.resa@moov.mg
                 </a>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Contact() {
             <h3 className="font-serif text-xl mb-4">{t('contact.socialTitle')}</h3>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.facebook.com/hotelroyalpalaceantsirabe"
+                href="https://www.facebook.com/hotelmarinabeachtoamasina"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-gold-600 hover:bg-gold-500 hover:text-white transition-colors"
@@ -81,7 +81,7 @@ export default function Contact() {
                 <Facebook size={18} />
               </a>
               <a
-                href="https://www.instagram.com/hotelroyalpalace_antsirabe/"
+                href="https://www.instagram.com/hotelmarinabeach_toamasina/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-gold-600 hover:bg-gold-500 hover:text-white transition-colors"

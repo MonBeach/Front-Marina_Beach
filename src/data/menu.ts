@@ -107,8 +107,8 @@ export const menuSections: MenuSection[] = [
     items: [
       {
         id: 'b1',
-        name: 'Cocktail signature "Royal Palace"',
-        nameEn: '"Royal Palace" signature cocktail',
+        name: 'Cocktail signature "Marina Beach"',
+        nameEn: '"Marina Beach" signature cocktail',
         description: 'Rhum arrangé maison, fruits de la passion',
         descriptionEn: 'House-infused rum, passion fruit',
         price: 15000,

@@ -10,7 +10,7 @@ interface PageHeroProps {
  * PageHero
  * --------
  * Smaller banner hero used on secondary pages (Rooms, Restaurant, Spa...).
- * Keeps the same elegant gold/white aesthetic as the homepage hero.
+ * Keeps the same turquoise/white aesthetic as the homepage hero.
  */
 export default function PageHero({ image, title, subtitle }: PageHeroProps) {
   return (

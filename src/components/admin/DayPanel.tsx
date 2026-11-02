@@ -77,7 +77,7 @@ export default function DayPanel() {
             rows={data.arrivals} empty="Aucune arrivée ce jour-là."
           />
           <DayList
-            title="Départs" icon={LogOut} tone="text-amber-700"
+            title="Départs" icon={LogOut} tone="text-gold-700"
             rows={data.departures} empty="Aucun départ ce jour-là."
           />
           <DayList

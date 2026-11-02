@@ -7,7 +7,7 @@ import BookingBar from './BookingBar'
  * ----
  * Full-screen hero replicating the reference photo:
  * - Full-bleed building image (dusk lighting)
- * - Centered "ROYAL PALACE" / "A N T S I R A B E" title with gold divider
+ * - Centered title with turquoise divider
  * - Tagline in italic serif
  * - Floating white booking bar overlapping the bottom edge
  *
@@ -34,7 +34,7 @@ export default function Hero() {
         */}
         <img
           src="/images/Photo-Gallerie-1-1200.jpg"
-          alt="Royal Palace Antsirabe — façade de l'hôtel au crépuscule"
+          alt="Marina Beach Toamasina — façade de l'hôtel au crépuscule"
           width={1382}
           height={745}
           loading="eager"

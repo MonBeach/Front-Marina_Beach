@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  background-color: #C9A961;
+  background-color: #26A4B2;
   color: white;
 }
 
@@ -19,30 +19,37 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #F5F5F0;
+  background: #F5F8FA;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #C9A961;
+  background: #1F8796;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8984F;
+  background: #143369;
 }
 
 @layer components {
   .section-title {
     @apply font-serif text-3xl md:text-5xl text-charcoal tracking-wide;
   }
+
   .section-eyebrow {
     @apply text-gold-600 font-sans text-xs md:text-sm tracking-widest2 uppercase font-medium mb-3;
   }
+
   .btn-gold {
     @apply inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-600 text-white font-medium tracking-wider uppercase text-sm px-8 py-4 transition-all duration-300 shadow-card;
   }
+
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 border border-gold-500 text-gold-600 hover:bg-gold-500 hover:text-white font-medium tracking-wider uppercase text-sm px-8 py-4 transition-all duration-300;
   }
+
   .container-luxe {
     @apply max-w-7xl mx-auto px-6 md:px-10 lg:px-16;
   }
@@ -51,5 +58,5 @@ body {
 /* React-datepicker overrides for luxury theme */
 .rdp-luxe .react-datepicker {
   font-family: 'Inter', sans-serif;
-  border-color: #EAD9AF;
+  border-color: #BDE4E8;
 }
