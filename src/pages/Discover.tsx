@@ -1,51 +1,13 @@
-import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import {
-  Bus, CarTaxiFront, Droplets, Hammer, Landmark, MapPin, Mountain, Sparkles, TreePine, Waves,
-} from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import AnimatedSection from '@/components/AnimatedSection'
 import SectionHeading from '@/components/SectionHeading'
 import ImageGallery from '@/components/ImageGallery'
-import { api, resolveImageUrl } from '@/utils/api'
 import { useGalleryImages } from '@/hooks/useGallery'
-import type { DiscoverItem } from '@/types'
-
-/** Icônes autorisées pour les activités, saisies par leur nom au back-office. */
-const icons: Record<string, typeof CarTaxiFront> = {
-  CarTaxiFront, Waves, Hammer, Droplets, MapPin, Landmark, Mountain, TreePine, Sparkles, Bus,
-}
 
 export default function Discover() {
-  const { t, i18n } = useTranslation()
-  const english = i18n.resolvedLanguage?.startsWith('en')
+  const { t } = useTranslation()
   const discoverImages = useGalleryImages('discover')
-
-  const [activities, setActivities] = useState<DiscoverItem[]>([])
-  const [attractions, setAttractions] = useState<DiscoverItem[]>([])
-
-  useEffect(() => {
-    let cancelled = false
-    api.getDiscover().then((response) => {
-      if (cancelled || !response.data) return
-      setActivities(response.data.activities ?? [])
-      setAttractions(response.data.attractions ?? [])
-    })
-    return () => { cancelled = true }
-  }, [])
-
-  // Libellé saisi au back-office, sinon la traduction portée par la clé.
-  // Les clés diffèrent selon le type : `activity1Title` mais `attraction1`.
-  const title = (item: DiscoverItem) => {
-    const custom = english ? item.titleEn || item.title : item.title
-    if (custom) return custom
-    if (!item.key) return ''
-    return t(item.type === 'attraction' ? `discover.${item.key}` : `discover.${item.key}Title`)
-  }
-  const text = (item: DiscoverItem) => {
-    const custom = english ? item.textEn || item.text : item.text
-    return custom || (item.key ? t(`discover.${item.key}Text`) : '')
-  }
 
   return (
     <>
@@ -60,7 +22,8 @@ export default function Discover() {
         <SectionHeading title={t('discover.introTitle')} text={t('discover.introText')} />
       </AnimatedSection>
 
-      {/* Activities */}
+      {/* Local activities temporarily hidden */}
+      {/*
       {activities.length > 0 && (
         <section className="bg-cream py-20 md:py-24">
           <div className="container-luxe">
@@ -89,8 +52,10 @@ export default function Discover() {
           </div>
         </section>
       )}
+      */}
 
-      {/* Nearby attractions + Transport */}
+      {/* Nearby attractions and transport temporarily hidden */}
+      {/*
       <AnimatedSection className="container-luxe py-20 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <h3 className="font-serif text-2xl mb-6 flex items-center gap-3">
@@ -112,6 +77,7 @@ export default function Discover() {
           <p className="text-gray-600 leading-relaxed">{t('discover.transportText')}</p>
         </div>
       </AnimatedSection>
+      */}
 
       {/* Gallery */}
       <section className="bg-cream py-20 md:py-24">

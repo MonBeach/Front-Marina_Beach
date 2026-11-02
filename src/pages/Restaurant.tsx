@@ -1,61 +1,16 @@
-import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Clock, ChefHat } from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import AnimatedSection from '@/components/AnimatedSection'
 import SectionHeading from '@/components/SectionHeading'
 import ImageGallery from '@/components/ImageGallery'
-import { api } from '@/utils/api'
 import { useGalleryImages } from '@/hooks/useGallery'
-import { useLanguage } from '@/hooks/useLanguage'
-import type { MenuSection } from '@/types'
 
 export default function Restaurant() {
   const { t } = useTranslation()
-  const { lang } = useLanguage()
-  const [menuSections, setMenuSections] = useState<MenuSection[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
   const restaurantImages = useGalleryImages('restaurant')
 
-  useEffect(() => {
-    async function fetchMenu() {
-      const response = await api.getMenu()
-      if (response.error) {
-        setError(response.error)
-      } else if (response.data) {
-        setMenuSections(response.data)
-      }
-      setLoading(false)
-    }
-    fetchMenu()
-  }, [])
-
   const specialties = ['specialty1', 'specialty2', 'specialty3', 'specialty4']
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading menu...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <p className="text-red-600 mb-4">Failed to load menu: {error}</p>
-          <button onClick={() => window.location.reload()} className="btn-gold">
-            Retry
-          </button>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <>
@@ -125,7 +80,8 @@ export default function Restaurant() {
         </div>
       </AnimatedSection>
 
-      {/* Menu */}
+      {/* Menu temporarily disabled */}
+      {/*
       <section className="bg-cream py-20 md:py-24">
         <div className="container-luxe">
           <SectionHeading title={t('restaurant.menuTitle')} text={t('restaurant.menuText')} />
@@ -163,6 +119,7 @@ export default function Restaurant() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Gallery + CTA */}
       <AnimatedSection className="container-luxe py-20 md:py-24">

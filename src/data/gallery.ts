@@ -26,6 +26,8 @@ export const galleryImages: GalleryImage[] = [
   { id: 'spa-2', src: '/images/spa/spa-2.jpg', alt: 'Ambiance zen du spa', category: 'spa' },
   { id: 'spa-3', src: '/images/spa/spa-3.jpg', alt: 'Salle de massage apaisante', category: 'spa' },
 
+  { id: 'pool-1', src: '/images/pool/pool-1.jpg', alt: 'Piscine extérieure bordée de palmiers', category: 'pool' },
+
   { id: 'events-1', src: '/images/Photo-Evenements-1200.jpg', alt: 'Salle de réunion et événements', category: 'events' },
   { id: 'events-2', src: '/images/Photo-Gallerie-1-1200.jpg', alt: 'Salle de conférence professionnelle', category: 'events' },
   { id: 'events-3', src: '/images/Photo-Gallerie-2-1200.jpg', alt: 'Espace de réception pour événements', category: 'events' },
