@@ -208,7 +208,7 @@ const en = {
       'Professional seminars, conferences, weddings or private receptions: Marina Beach offers modular spaces and impeccable service for the success of your event.',
     roomsTitle: 'Our Rooms',
     capacityTitle: 'Capacities',
-    room1Name: 'Royal Lounge',
+    room1Name: 'Marina Beach Lounge',
     room1Capacity: 'Up to 150 people',
     room1Style: 'Theatre, banquet, cocktail',
     room2Name: 'Atsinanana Room',
