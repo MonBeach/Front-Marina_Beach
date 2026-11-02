@@ -22,8 +22,8 @@ const highlights = [
 
 const sisterHotels = [
   { key: 'sister1', image: '/images/Photo-Gallerie-1-1200.jpg' },
-  { key: 'sister2', image: '/images/Photo-Gallerie-2-1200.jpg' },
-  { key: 'sister3', image: '/images/Photo-Gallerie-5-1200.jpg' },
+  { key: 'sister2', image: '/images/WhatsApp%20Image%202026-11-02%20at%2011.45.41.jpeg' },
+  { key: 'sister3', image: '/images/images.jpg' },
 ]
 
 export default function Home() {
