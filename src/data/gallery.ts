@@ -20,7 +20,6 @@ export const galleryImages: GalleryImage[] = [
   { id: 'restaurant-2', src: '/images/restaurant/dish-real.jpg', alt: 'Plat raffiné du restaurant Marina Beach', category: 'restaurant' },
   { id: 'restaurant-3', src: '/images/restaurant/cocktails-real.jpg', alt: 'Cocktails et boissons fraîches', category: 'restaurant' },
   { id: 'restaurant-4', src: '/images/Photo-nourriture-1.webp', alt: 'Création culinaire du restaurant', category: 'restaurant' },
-  { id: 'restaurant-5', src: '/images/Photo-restaurant-1.webp', alt: 'Ambiance du restaurant Marina Beach', category: 'restaurant' },
 
   { id: 'spa-1', src: '/images/Photo-Gallerie-3-1200.jpg', alt: 'Cabine de soin du spa', category: 'spa' },
   { id: 'spa-2', src: '/images/spa/spa-2.jpg', alt: 'Ambiance zen du spa', category: 'spa' },
